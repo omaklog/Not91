@@ -1,0 +1,122 @@
+body{
+	font-family: Helvetica;
+	color: black;
+}
+fieldset{
+	color: black;
+	width: 96%;
+	font-family: Arial, Helvetica, sans-serif, 12px;
+	font-weight: bold;
+	border-radius: 2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border: 2px solid black; 
+	overflow: visible;
+	display: inline-block;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background: #9AC0CD;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00688B), to(#9AC0CD) );
+    background: -moz-linear-gradient(-90deg, #00688B, #9AC0CD);
+    background: -ms-linear-gradient(linear, rgba(97,172,228,0) 30%,rgba(97,172,228,0.1) 60%,rgba(97,172,228,0.3) 100%);
+    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#00688B', endColorstr='#9AC0CD');
+    behavior:url(js/border.htc);
+    position: relative;
+}
+fieldset input, select,file {
+	background-color: #FFF68F;
+	padding: 2px;
+	font-weight: bold;
+	float: auto;
+	border-radius: 2px;
+	color: black;
+
+}
+legend{
+	text-align: left;
+	color: #FFF;
+	border-top-style: black;
+	background-color: #CCC;
+	height: 20px;
+	border-radius: 2px;
+	border: 2px solid #035;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	position:absolute;
+	top: -0.8em;
+}
+#comparecientes{
+	background-color: #FFF68F;
+	overflow: auto;
+	max-height: 150px;
+	margin-top: 5px;
+
+}
+#acto, #tipocom{
+	width: 200px;
+	height: 25px;
+}
+#contacto{
+	width: 20%;
+	float: left;
+	display: inline-block;
+	height: 180px;
+}
+#comentarios{
+	width: 26%;
+	height: 180px;
+	float: left;
+}
+#guardar{
+	float: left;
+	width: 10%;
+	height: 180px;
+}
+#inst{
+	width: 100%;
+	margin: 0, auto;
+}
+#instrumento{
+	max-width: 200px;
+	min-width: 120px;
+}
+#volumen{
+	width: 39%;
+	max-width: 200px;
+	min-width: 120px;
+}
+#responsable{
+	float: left;
+	width: 30%;
+	height: 180px;
+}
+.button{
+	border-radius:2px;
+	background-color: #A9A9A9;
+	display: inline-block;
+	padding: 5px 10px 6px;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 1;
+	-moz-box-shadow: 0 0 3px #999;
+	-khtml-box-shadow: 0 0 3px #999;
+	-webkit-box-shadow: 0 0 3px #999;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-shadow: 0 -1px 1px rgba(0,0,0,.25);
+	border:1px solid transparent;
+	position: relative;
+	cursor: pointer;
+}
+#btnGuardar, #btnCancelar{
+	border: black solid 1px;
+	margin-top: 30px;
+	width: 90%;
+	height: 20%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+#btnGuardar, #btnCancelar hover:{
+	background-color: #FFF;
+}
