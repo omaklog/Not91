@@ -1,3 +1,4 @@
+var cont=0;
 function inicializar(){
 	var x=$("#nuevo");
 	x.click(showselacto);
@@ -58,15 +59,21 @@ function llegadacomp(datos){
 }
 //funcion para insertar los comparecientes agregados en el div
 function agregarcomp(){
-	var comp=$("#txtcomp").value();
+	var comp=$("#txtComp").val();
 	var tcid=$("#tipocom").val();
-	var tccad=$("#tipocom").value();
+	var name="compa"+tcid;
+	var fila="fila"+(cont++);
+	var $selectedOption = $("#tipocom").find('option:selected');
+	var selectedLabel = $selectedOption.text();
+	var cad="<tr role='row' id='"+fila+"'><td><input type='checkbox' id='chk"+fila+"'></td><td id='comp"+fila+"'>"+comp.toUpperCase()+"</td><td id='tc"+fila+"'value="+tcid+" >"+selectedLabel+"</td><td><input id ='btn"+fila+"' type='button' value='Eliminar' class='btneliminar' onclick='eliminarfila("+cont+")'></td></tr>";
+	$("#cuerpotabla").append(cad);
+	$("#txtComp").val('');
+	$("#txtComp").focus();
 }
-
-
-
-
-
+function eliminarfila(fila){
+	alert(fila);
+	$("#fila"+(fila-1)).remove();
+}
 
 
 

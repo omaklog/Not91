@@ -7,9 +7,15 @@
 </head>
 <link type="text/css" href="css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet"/>
 <link type="text/css" href="css/style.css" rel="stylesheet"/>
+<link href="css/kendoblue.css" rel="stylesheet">
+<link href="css/kendo.common.min.css" rel="stylesheet">
+<link href="css/kendo.default.min.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jqueryui.js"></script>
 <script type="text/javascript" src="js/funciones.js"></script>
+    <script src="js/kendo.web.min.js"></script>
+    <script src="js/console.js"></script>
+
 <script type="text/javascript">
 	var x;
 	x=$(document);

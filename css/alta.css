@@ -1,10 +1,10 @@
 body{
 	font-family: Helvetica;
 	color: black;
+	padding: 15px;
 }
 fieldset{
 	color: black;
-	width: 96%;
 	font-family: Arial, Helvetica, sans-serif, 12px;
 	font-weight: bold;
 	border-radius: 2px;
@@ -12,11 +12,8 @@ fieldset{
 	-webkit-border-radius:2px;
 	border: 2px solid black; 
 	overflow: visible;
-	display: inline-block;
-	margin-bottom: 5px;
-	margin-top: 10px;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 10px;
+	margin-bottom: 25px;
 	background: #9AC0CD;
     background: -webkit-gradient(linear, left top, left bottom, from(#00688B), to(#9AC0CD) );
     background: -moz-linear-gradient(-90deg, #00688B, #9AC0CD);
@@ -24,15 +21,16 @@ fieldset{
     filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#00688B', endColorstr='#9AC0CD');
     behavior:url(js/border.htc);
     position: relative;
+    padding: 1px;
 }
-fieldset input, select,file {
+	input, select{
 	background-color: #FFF68F;
-	padding: 2px;
+	margin-top: 4px;
+	margin-left: 2px;
+	margin-right: 2px;
 	font-weight: bold;
-	float: auto;
-	border-radius: 2px;
-	color: black;
-
+	border-radius: 4px;
+	padding: 1px;
 }
 legend{
 	text-align: left;
@@ -59,25 +57,48 @@ legend{
 }
 #contacto{
 	width: 20%;
+	height: 180px;
 	float: left;
 	display: inline-block;
-	height: 180px;
+}
+#comentario{
+	margin-top: 3%;
+	width: 60%;
+	margin-left: 5%;
+	height: 80%;
+	float: left;
 }
 #comentarios{
-	width: 26%;
+	width: 40%;
 	height: 180px;
 	float: left;
 }
-#guardar{
-	float: left;
-	width: 10%;
-	height: 180px;
+#gridcomp{
+	width: 96%;
+	margin-right: .5%;
+	margin-left: .5%;
+	background-color: #035;
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 10px;
+
+}
+#gridheader{
+	width: 100%;
+	background-color: #9AC0CD;
+}
+#gridrow{
+	width: 100%;
+	background-color: white;
+}
+#gridcuerpo{
+	width: 100%;
 }
 #inst{
-	width: 100%;
+	width: 99%;
 	margin: 0, auto;
 }
-#instrumento{
+#instrumento{	
 	max-width: 200px;
 	min-width: 120px;
 }
@@ -87,9 +108,12 @@ legend{
 	min-width: 120px;
 }
 #responsable{
-	float: left;
 	width: 30%;
 	height: 180px;
+	float: left;
+}
+#segunda{
+	width: 90%;
 }
 .button{
 	border-radius:2px;
@@ -112,11 +136,51 @@ legend{
 #btnGuardar, #btnCancelar{
 	border: black solid 1px;
 	margin-top: 30px;
-	width: 90%;
+	width: 25%;
 	height: 20%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	float: left;
+}
+#btnGuardar:hover, #btnCancelar:hover{
+	background-color: white;
+}
+table{
+	width: 100%;
+}
+th,td{
+	margin-right: 10px;
+	text-align: center;
+	margin-left: 10px;
+	border: 1px solid grey;
+}
+col{
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 200px;
+	border: 1px solid grey;
+
+}
+#name{
+	width: 600px;
+}
+#Cnombre, #Ctel, #Cmail{
+	width: 90%;
 	margin-left: 5%;
 	margin-right: 5%;
 }
-#btnGuardar, #btnCancelar hover:{
-	background-color: #FFF;
+#txtComp{
+	width: 30%;
+}
+#upload_button{
+    width:120px;
+    height:20px;
+    text-align:center;
+    background-color: #035;
+    vertical-align: center;
+    margin-top: 20%;
+    color:#CCCCCC;
+    font-weight:bold;
+    padding-top:15px;
+    border-radius: 5px;
 }
