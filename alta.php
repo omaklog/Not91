@@ -10,14 +10,22 @@
 	x=$(document);
 	x.ready(inicializar);
 </script>
+<script language=javascript type=text/javascript>
+function stopRKey(evt) {
+var evt = (evt) ? evt : ((event) ? event : null);
+var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+if ((evt.keyCode == 13) && (node.type=="text")) {return false;}
+}
+document.onkeypress = stopRKey; 
+</script>
 </head>
 <body>
 	<?php 
 		session_start()
 	?>
-	<form action="insertins.php" method="POST" id="formInst">
+	<form action="php/insertins.php" method="POST" id="formInst">
 		<div id="inst">
-			<fieldset>
+			<fieldset id="primera">
 			<legend>Datos de Instrumento</legend>
 					<select id="cmbTipo" placeholder="Selecciona un tipo de acto">
 						<<option >Selecciona un Tipo de Acto</option>
@@ -27,8 +35,8 @@
 					<select id="acto">
 						<option value="">Seleccione el acto Jurídico</option>
 					</select>
-				<input type="number" id="instrumento" name="instrumento" placeholder="Numero de Instrumento" required>
-				<input type="number" id="volumen" name="volumen" placeholder="Numero de Volumen" required>
+				<input type="number" min="1" id="instrumento" name="instrumento" placeholder="Numero de Instrumento" required>
+				<input type="number" min="1" id="volumen" name="volumen" placeholder="Numero de Volumen" required>
 				<label> Fecha de Celebración: </label><input type="date" id="fechacel" name="fechacel" required>
 				<p></p>
 				<div id="gridcomp" >
@@ -37,23 +45,22 @@
 						<select id="tipocom">
 							<option value="">Tipo de Compareciente</option>
 						</select>
-						<input id="btnAgregar" type="button" value="Agregar" class="button"><br>
+						<input id="btnAgregar" class="botones" type="button" value="Agregar" class="button"><br>
 					</div>
 						<div id="gridheader">
 							<p></p>
 							<table role="grid" cellspacing="0">
 								<colgroup>
 									<col>
-									<col id="name">
 									<col>
-									<col></col>
+									<col>
 								</colgroup>
 								<thead>
 									<tr>
-										<th id="chkbx">Seleccionar</th>
-										<th id="name">Nombre</th>
-										<th id="tipe">Tipo</th>
-										<th id="del">Eliminar</th>
+	
+										<th class="name">Nombre</th>
+										<th class="tipe">Tipo</th>
+										<th class="del">Eliminar</th>
 									</tr>
 								</thead>
 							</table>
@@ -70,20 +77,17 @@
 							</tbody>
 						</table>
 					</div>
+					<h5 id="not">Haz clic sobre el nombre del cliente que será notificado sobre el avance del trámite</h5>
 				</div>
 			</fieldset>
 		</div>
 			<div id="segunda">
-				<fieldset id="contacto" class="contacto">
+				<fieldset id="contacto" >
 					<legend>Contacto</legend>
-					<p><input id="Cnombre"type="text" name="nombre" placeholder="Nombre" required></p>
-					<p><input id="Ctel" type="tel" name="acto" placeholder="Teléfono" required></p>
+					<p><input id="Cnombre"type="text" readonly="readonly" 	name="nombre" placeholder="Nombre" required></p>
+					<p><input id="Ctel" type="tel" name="tel" placeholder="Teléfono" required></p>
 					<p><input id="Cmail" type="mail" name="E-mail" placeholder="E-mail"></p>
-				</fieldset>
-				<fieldset id="responsable">
-					<legend>Responsables</legend>
-					<p><label>Redactor</label><?php echo " ".$_SESSION["nombre"]."" ?></p>
-					<p>Gestiona: <select id="gestor"></p>
+					Gestiona: <select id="gestor">
 						<?php 
 							include("php/conexion.php");
 								//Crea la cadena y devuelve el arreglo con los resultados
@@ -94,23 +98,25 @@
 							  echo "<option value=".$reg['id'].">".$reg['nombre']."</option>";
 							}
 						?>
-						</select></p>
-					<label>Archivo: </label>
-					<div id="upload_button">Cargar Archivo</div>
-					<ul id="lista">
-					</ul>
+						</select>
+				</fieldset>
+				<fieldset id="uparchivos">
+					<legend>Datos</legend>
+					<div id="nuevaimagen">
+					</div>
 				</fieldset>
 				<fieldset id="comentarios">
 					<legend>Comentarios</legend>
 					<textarea id="comentario" name="comentario" rows="8" cols="30"></textarea>
-					<input id ="btnCancelar" type="button" value="Cancelar" class="button"><br>
-					<input id ="btnGuardar" type="submit" value="Guardar" class="button"><br>
+					<input class="botones" id ="btnCancelar" type="button" value="Cancelar" class="button"><br>
+					<input class="botones" id ="btnGuardar" type="submit" value="Guardar" class="button"><br>
 				</fieldset>
+				
 			</div>
+	<div id="resultados"></div>
+	</form>
 <?php
 
 ?>
-</form>
-
 </body>
 </html>

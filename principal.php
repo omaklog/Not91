@@ -5,21 +5,29 @@
 <title>
 </title>
 </head>
-<link type="text/css" href="css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet"/>
 <link type="text/css" href="css/style.css" rel="stylesheet"/>
-<link href="css/kendoblue.css" rel="stylesheet">
-<link href="css/kendo.common.min.css" rel="stylesheet">
-<link href="css/kendo.default.min.css" rel="stylesheet">
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jqueryui.js"></script>
+<link rel="stylesheet" type="text/css" href="css/alta.css">
 <script type="text/javascript" src="js/funciones.js"></script>
-    <script src="js/kendo.web.min.js"></script>
-    <script src="js/console.js"></script>
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="uploadify/jquery.uploadify.js"></script>
 
 <script type="text/javascript">
 	var x;
 	x=$(document);
 	x.ready(inicializar);
+</script>
+<script type="text/javascript">
+	var x;
+	x=$(document);
+	x.ready(inicializar);
+</script>
+<script language=javascript type=text/javascript>
+function stopRKey(evt) {
+var evt = (evt) ? evt : ((event) ? event : null);
+var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+if ((evt.keyCode == 13) && (node.type=="text")) {return false;}
+}
+document.onkeypress = stopRKey; 
 </script>
 <body>	
 

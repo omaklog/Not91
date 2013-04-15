@@ -19,7 +19,8 @@ $_SESSION['valido']="";
 if($coin==1)
 {
 	$_SESSION['valido']="valido";
-	$datos=mysql_fetch_assoc($RESULT);	
+	$datos=mysql_fetch_assoc($RESULT);
+	$_SESSION["id"]=$datos['id'];	
 	$_SESSION["nombre"]=$datos['nombre'];
 	$_SESSION["user"]=$datos['usuario'];
 	$_SESSION["clave"]=$datos['clave'];

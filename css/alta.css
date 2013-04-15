@@ -1,7 +1,8 @@
-body{
-	font-family: Helvetica;
-	color: black;
-	padding: 15px;
+col{
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 200px;
+	border: 1px solid grey;
 }
 fieldset{
 	color: black;
@@ -20,8 +21,9 @@ fieldset{
     background: -ms-linear-gradient(linear, rgba(97,172,228,0) 30%,rgba(97,172,228,0.1) 60%,rgba(97,172,228,0.3) 100%);
     filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#00688B', endColorstr='#9AC0CD');
     behavior:url(js/border.htc);
-    position: relative;
-    padding: 1px;
+  	position: relative;
+  	padding: 10px;
+  	display: inline-block;
 }
 	input, select{
 	background-color: #FFF68F;
@@ -44,22 +46,52 @@ legend{
 	position:absolute;
 	top: -0.8em;
 }
+table{
+	width: 100%;
+}
+td{
+	margin-right: 10px;
+	text-align: center;
+	margin-left: 10px;
+	border: 1px solid grey;
+	width: 100px;
+}
+th{
+	margin-right: 10px;
+	text-align: center;
+	margin-left: 10px;
+	border: 1px solid grey;
+	width: 100px;
+}
+#acto, #tipocom{
+	width: 200px;
+	height: 25px;
+}
+#not{
+	color: white;
+}
+#btnGuardar, #btnCancelar{
+	margin-top: 30px;
+	width: 25%;
+	height: 20%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	float: left;
+}
+#btnGuardar:hover, #btnCancelar:hover{
+	background-color: white;
+}
+#Cnombre, #Ctel, #Cmail{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
 #comparecientes{
 	background-color: #FFF68F;
 	overflow: auto;
 	max-height: 150px;
 	margin-top: 5px;
 
-}
-#acto, #tipocom{
-	width: 200px;
-	height: 25px;
-}
-#contacto{
-	width: 20%;
-	height: 180px;
-	float: left;
-	display: inline-block;
 }
 #comentario{
 	margin-top: 3%;
@@ -69,9 +101,15 @@ legend{
 	float: left;
 }
 #comentarios{
-	width: 40%;
+	width: 35%;
+	height: 180px;
+	float: right;
+}
+#contacto{
+	width: 20%;
 	height: 180px;
 	float: left;
+	display: inline-block;
 }
 #gridcomp{
 	width: 96%;
@@ -83,6 +121,9 @@ legend{
 	padding: 10px;
 
 }
+#gridcuerpo{
+	width: 100%;
+}
 #gridheader{
 	width: 100%;
 	background-color: #9AC0CD;
@@ -91,29 +132,36 @@ legend{
 	width: 100%;
 	background-color: white;
 }
-#gridcuerpo{
+#inst{
 	width: 100%;
 }
-#inst{
-	width: 99%;
-	margin: 0, auto;
-}
 #instrumento{	
-	max-width: 200px;
+	max-width: 180px;
 	min-width: 120px;
 }
-#volumen{
-	width: 39%;
-	max-width: 200px;
-	min-width: 120px;
+#primera{
+	margin-top: 10px;
+	width: 100%;
 }
-#responsable{
+#segunda{
+	width: 100%;
+	background-color: red;
+}
+#txtComp{
 	width: 30%;
+}
+#texta{
+vertical-align: 50%;
+}
+#uparchivos{
+	width: 35%;
 	height: 180px;
 	float: left;
 }
-#segunda{
-	width: 90%;
+#volumen{
+	width: 39%;
+	max-width: 180px;
+	min-width: 120px;
 }
 .button{
 	border-radius:2px;
@@ -133,54 +181,194 @@ legend{
 	position: relative;
 	cursor: pointer;
 }
-#btnGuardar, #btnCancelar{
-	border: black solid 1px;
-	margin-top: 30px;
-	width: 25%;
-	height: 20%;
-	margin-left: 2.5%;
-	margin-right: 2.5%;
-	float: left;
+.del,.tipe{
+	width: 20%;
 }
-#btnGuardar:hover, #btnCancelar:hover{
-	background-color: white;
+.name{
+	width: 60%;
 }
-table{
-	width: 100%;
+.cajas{
+background:#F7F8E0;
+border:1px solid #00BFFF;
+height: 30px;
+border-radius:1px;
 }
-th,td{
-	margin-right: 10px;
-	text-align: center;
-	margin-left: 10px;
-	border: 1px solid grey;
+
+#contenedor{
+background-color:#A9E2F3;
+width:100%;
+border-radius:10px;
+margin:50px auto;
 }
-col{
-	margin-left: 10px;
-	margin-right: 10px;
-	width: 200px;
-	border: 1px solid grey;
+
+#nuevaimagen{
+margin-left: 2.5%;
+margin-right: 2.5%;
+}
+
+#listadoimagenes{
+margin-left: 50px;
+float:left;
+}
+
+#mensajevacio{
+background: #084B8A url(../images/warning_32x32.png)no-repeat;
+padding:10px;
+color:#fff;
+text-align: center;
+width:300px;
+border-radius:5px;
+}
+
+.botones{
+background: #084B8A;
+color:#fff;
+padding:5px;
+border: 1px solid #fff;
+border-radius:5px;
+cursor:pointer;
+}
+
+.botones:hover{
+background: #0174DF;
+}
+
+#cabecera{
+background: #084B8A ;
+padding:10px;
+color:#fff;
+text-align: center;
+font-size:14px;
+border-radius:5px;
+}
+
+.formulario-title{
+background: #0B0719;
+color:#fff;
+padding:5px;
+text-align: center;
+width: 100%;
+}
+
+.demoTable {
+border-spacing:1px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:10px;
+background-color:#C3E6FF;
+color: #b7b7b7;
+width:100%;
+margin:auto;
+}
+
+.demoTable td, .demoTable tr, .demoTable th{
+border-collapse: separate;
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+.demoTable caption {
+font-weight: bold;
+background: #50ADEA url(../images/corner.gif) no-repeat right top;
+border-bottom:2px solid #1975d7;
+color: #FFF;
+text-transform:uppercase;
+padding:10px;
+margin:auto;
+}
+
+.demoTable td, .demoTable th {
+padding: 4px;
+}
+
+.demoTable thead th {
+text-align: center;
+background: #C3E6FF;
+color: #0B173B;
+border: 1px solid #C3E6FF;
+text-transform:uppercase;
+}
+
+.demoTable tr:hover{
+background:#C3E6FF;
+}
+
+.demoTable tbody tr {
+background-color:#C3E6FF;
+color: #0B173B;
+text-align:left;
+}
+
+.demoTable tbody tr th {
+background-color:#C3E6FF;
+color: #2E2E2E;
+text-align:left;
+}
+
+.demoTable tbody tr.odd {
+background: #f9f9f9;
+border-top:1px solid #FFF;
+}
+
+/*.demoTable tbody tr:hover {
+background: red;
+border-top:1px solid #FFF;
+}*/
+
+.demoTable tbody tr:hover{
+background: #fff;
+color:#000;
+}
+
+.demoTable tbody tr {
+height:50px;
+background: #FAFAFA;
+border: 1px solid #FFF;
+}
+
+.demoTable tbody tr.odd td{
+background: #f9f9f9;
+border-top:1px solid #FFF;
+}
+.demoTable td a:link, .demoTable td a:visited {
+color: #0B3861;
+text-decoration: none;
+}
+
+.demoTable td a:hover {
+color: #0B3861;
+border-bottom:2px solid #8FD5FF;
+text-decoration: none ;
+}
+
+.demoTable tfoot th, .demoTable tfoot td {
+background-color:#fff; padding:10px;
+text-align:center;
+font-family:Georgia, “Times New Roman”, Times, serif;
+font-size:22px; font-weight:bold; font-style:italic;
+border-bottom:3px solid #CCC;
+border-top:1px solid #DFDFDF;
+}
+.fileUploadQueueItem {
+	font: 11px Verdana, Geneva, sans-serif;
+	background-color: #E0EEEE;
+	border: 3px solid #E0EEEE;
+	padding: 5px;
+	width: 95%;
 
 }
-#name{
-	width: 600px;
+.fileUploadQueueItem .cancel {
+	float: right;
+	background-color: transparent;
 }
-#Cnombre, #Ctel, #Cmail{
-	width: 90%;
-	margin-left: 5%;
-	margin-right: 5%;
+.fileUploadProgress {
+	background-color: #FFFFFF;
+	border-top: 1px solid #808080;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #C5C5C5;
+	border-bottom: 1px solid #C5C5C5;
+	margin-top: 10px;
+	width: 80%;
 }
-#txtComp{
-	width: 30%;
-}
-#upload_button{
-    width:120px;
-    height:20px;
-    text-align:center;
-    background-color: #035;
-    vertical-align: center;
-    margin-top: 20%;
-    color:#CCCCCC;
-    font-weight:bold;
-    padding-top:15px;
-    border-radius: 5px;
+.fileUploadProgressBar {
+	background-color: ##E0EEEE;
 }
