@@ -25,8 +25,13 @@ $nuevoid=mysql_fetch_array($resultado);
 			}
 		$i++;
 		}
-	$cad="INSERT INTO `notaria`.`expediente` (`idexp`, `id_tacto`, `id_acto`, `instrumento`, `volumen`, `fecha_cel`, `id_red`, `id_status`, `Folio_RPP`, `id_gestor`, `comentario`) VALUES (NULL, '".$_POST['idta']."', '".$_POST['idaj']."', '".$_POST['inst']."', '".$_POST['vol']."', '".$_POST['fechacel']."', '".$_SESSION['id']."', '', '', '".$_POST['gestor']."' ,'".$_POST['com']."');";
+	$cad="INSERT INTO `notaria`.`expediente` (`idexp`, `id_tacto`, `id_acto`, `instrumento`, `volumen`, `fecha_cel`, `id_red`, `id_status`, `Folio_RPP`, `id_gestor`, `comentario`) VALUES (NULL, '".$_POST['idta']."', '".$_POST['idaj']."', '".$_POST['inst']."', '".$_POST['vol']."', '".$_POST['fechacel']."', '".$_SESSION['id']."', '1', '', '".$_POST['gestor']."' ,'".$_POST['com']."');";
 	$resultado=mysql_query($cad);
+	echo $cad;
+	$fecha=date("Y/m/d");
+	$cad="INSERT INTO `notaria`.`bitacora` (`id`, `idav`, `idexp`, `fecha`, `id_usr`)VALUES (NULL, '1', '".$nuevoid['LastId']."', '".$fecha."', '".$_SESSION['id']."');";
+	$resultado=mysql_query($cad);
+	echo $cad.$fecha;
 	validarc($resultado);
 function validarc($resultado){
 	if ($resultado) {

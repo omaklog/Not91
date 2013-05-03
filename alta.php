@@ -4,7 +4,6 @@
 <title>
 </title>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="css/alta.css">
 <script type="text/javascript">
 	var x;
 	x=$(document);
@@ -28,7 +27,7 @@ document.onkeypress = stopRKey;
 			<fieldset id="primera">
 			<legend>Datos de Instrumento</legend>
 					<select id="cmbTipo" placeholder="Selecciona un tipo de acto">
-						<<option >Selecciona un Tipo de Acto</option>
+						<option >Selecciona un Tipo de Acto</option>
 						<option value="0">TRASLATIVO</option>
 						<option value="1">NO TRASLATIVO</option>
 					</select>
@@ -37,7 +36,7 @@ document.onkeypress = stopRKey;
 					</select>
 				<input type="number" min="1" id="instrumento" name="instrumento" placeholder="Numero de Instrumento" required>
 				<input type="number" min="1" id="volumen" name="volumen" placeholder="Numero de Volumen" required>
-				<label> Fecha de Celebración: </label><input type="date" id="fechacel" name="fechacel" required>
+				<label> Fecha de Celebración: </label><input type="text"  class="datepicker" id="fechacel" name="fechacel" required>
 				<p></p>
 				<div id="gridcomp" >
 					<div id="gridcuerpo">
@@ -109,7 +108,7 @@ document.onkeypress = stopRKey;
 					<legend>Comentarios</legend>
 					<textarea id="comentario" name="comentario" rows="8" cols="30"></textarea>
 					<input class="botones" id ="btnCancelar" type="button" value="Cancelar" class="button"><br>
-					<input class="botones" id ="btnGuardar" type="submit" value="Guardar" class="button"><br>
+					<input class="botones" id ="btnGuardar" onclick="javascript:startUpload('file_upload', document.getElementById('instrumento'))" type="submit" value="Guardar" class="button"><br>
 				</fieldset>
 				
 			</div>

@@ -6,21 +6,19 @@
 </title>
 </head>
 <link type="text/css" href="css/style.css" rel="stylesheet"/>
-<link rel="stylesheet" type="text/css" href="css/alta.css">
+<link href="js/jquery-ui/css/custom-theme/jquery-ui-1.10.2.custom.css" rel="stylesheet">
 <script type="text/javascript" src="js/funciones.js"></script>
 <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui/js/jquery-ui-1.10.2.custom.js" type="text/javascript"></script>
 <script type="text/javascript" src="uploadify/jquery.uploadify.js"></script>
 
+<!--El siguiente script manda a llamar la funcion inicializar del archivo funciones-->
 <script type="text/javascript">
 	var x;
 	x=$(document);
 	x.ready(inicializar);
 </script>
-<script type="text/javascript">
-	var x;
-	x=$(document);
-	x.ready(inicializar);
-</script>
+<!--El siguiente script bloquea el envio por submit al dar un enter-->
 <script language=javascript type=text/javascript>
 function stopRKey(evt) {
 var evt = (evt) ? evt : ((event) ? event : null);

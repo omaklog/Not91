@@ -1,15 +1,8 @@
 a{
 	background-color: #036;
-	border: 2px solid #CCC;
-	border-radius: 2px;
-	color: #DDD;
-	display: block;
-	float: right;height: 20px;width: . 100px;
-	margin: 2px;
-	padding: 2px;}
-a:hover{
-	background-color: #FFF;
-	color: #9C0;}
+	border-radius: 4px;
+}
+
 body{
 	font-family:Arial, Helvetica, sans-serif;font-size:12px;
 	padding: 1px;
@@ -81,26 +74,16 @@ nav{
 	margin: 2px 2px 2px 2px;}
 nav p{
 	text-align: left;}
-table{
-	width: 100%;}
+
 td{
-	margin-right: 10px;
-	text-align: center;
-	margin-left: 10px;
-	border: 1px solid grey;
-	width: 100px;}
+	border: 1px solid black;
+	border-radius: 2px;}
 th{
-	margin-right: 10px;
 	text-align: center;
-	margin-left: 10px;
+	background-color: #035;
+	color: white;
 	border: 1px solid grey;
-	width: 100px;
-	background-color: #9AC0CD}
-tr{
-	width: 100%;
-	margin-left: 5%;
-	height: 2px;
-}
+	width: 10px;}
 #acto, #tipocom{
 	width: 200px;
 	height: 25px;
@@ -244,11 +227,16 @@ tr{
 #segunda{
 	width: 100%;
 	background-color: red;}
+#tdfecha{
+	text-align: center;
+}
+#thfecha{
+	width: 100px;
+}
 #txtComp{
 	width: 30%;}
 #tbandeja{
 	width: 100%;
-	background-color: red;
 	height: 100px;
 	margin-left: .5%;
 	margin-top: 0px;
@@ -282,6 +270,26 @@ vertical-align: 50%;}
 	border:1px solid transparent;
 	position: relative;
 	cursor: pointer;}
+.acciones{
+ white-space: nowrap;
+ width: 1px;
+ display: inline;
+ list-style: none;
+ float: left;
+ margin:0;
+padding:0;
+ border: 0;}
+ .acciones li{
+ display: inline;
+ float: left;
+ clear: left;
+}
+ .acciones img{
+ 	display: inline;
+ 	float: left;
+ 	clear: left;
+ 	background-color: pink;
+ }
 .del,.tipe{
 	width: 20%;}
 .name{
@@ -415,12 +423,72 @@ padding: 4px;}
 	width: 80%;}
 .fileUploadProgressBar {
 	background-color: ##E0EEEE;}
+.hEditar{
+	white-space: nowrap;
+	width: 1px;
+	}
 .hlist{
-	width: 5%;	
-}
-.hinst,.hvol{
-	width: 7%;
-}
+	white-space: nowrap;
+	width: 1px;}
+.hinst {
+	white-space: nowrap;
+	width: 1px;}
+.hvol{
+	white-space: nowrap;
+	width: 1px;}
 .hcomp{
-	width:24%;
+	width: 500px;}
+.tdcomp{
+	text-align: left;
+}
+.tdges{
+	text-align: left;
+	overflow: hidden;
+	width:120px;}
+.tdav{
+	overflow: hidden;
+	width:200px;}
+.tdav li:hover{
+	background-color: #035
+	color: white;
+}
+.tdinst{
+	text-align: center;
+}
+.tdlist {
+	text-align: center;
+}
+.tdsir{
+	text-align: center;
+}
+
+.tdstat{
+	text-align: center;
+}
+.tdvol{
+	text-align: center;
+}
+.par{
+	background-color: #F0F8FF;
+	color:#035;
+}
+.impar{
+	background-color: #F2F2F2;
+	border:1px solid black;
+	color:#035;
+}
+.tahead{
+	background-color: #035;
+	color: #FFF;
+}
+.iconoEdit :hover{
+	cursor: pointer;
+}
+.liacc :hover{
+	background-color: black;
+	color:white;
+}
+#txtcom{
+	border: 1px solid #035;
+	border-top: 5px solid #035;
 }

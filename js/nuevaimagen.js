@@ -7,7 +7,7 @@ $(document).ready(function() {
         'folder': 'uploads',
         'buttonText': 'examinar',
         'checkScript': 'uploadify/check.php',
-        'fileDesc': 'archivos imagen',
+        'fileDesc': 'archivo captura',
         'auto':false,
       'fileExt': '*.jpg;*.jpeg;*.gif;*.png,;*.docx;*.doc',
 

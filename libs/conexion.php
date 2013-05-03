@@ -1,5 +1,5 @@
 <?php
-function Conectarse(){
+function conectar(){
 $servidor="localhost";
 $basededatos="notaria";
 $usuario="root";

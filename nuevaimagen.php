@@ -12,6 +12,5 @@
 </table>
 </div></div></div>
 <div >
-<input class="botones" type="button" value="Guardar Imagen" onclick="javascript:startUpload('file_upload', document.getElementById('instrumento'))"/>
 </div>
 </form>
